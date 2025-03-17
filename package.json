@@ -14,7 +14,11 @@
     "db:studio": "prisma studio",
     "test": "jest --runInBand",
     "test:coverage": "jest --coverage --runInBand",
-    "postinstall": "npm run db:reset"
+    "postinstall": "npm run db:reset",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -34,10 +38,12 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "nodejs-pokedex-api": "file:",
     "swagger-ui-express": "^5.0.1",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
@@ -46,14 +52,19 @@
     "@types/supertest": "^6.0.2",
     "@types/swagger-ui-express": "^4.1.7",
     "@types/yamljs": "^0.2.34",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-mock-extended": "^4.0.0-beta1",
     "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
     "prisma": "^6.1.0",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.26.1"
   },
   "engines": {
     "node": ">=22 <23"
